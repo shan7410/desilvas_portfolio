@@ -1,0 +1,350 @@
+@import url('https://fonts.googleapis.com/css?family=Cabin|Calligraffitti|Fjalla+One|Inconsolata|Indie+Flower|Lato|Libre+Franklin|Noto+Sans+JP|Noto+Serif|Open+Sans|Open+Sans+Condensed:300|Oswald|Poppins|Roboto|Titillium+Web|Ubuntu+Condensed|Ubuntu+Mono|Yanone+Kaffeesatz&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Herr+Von+Muellerhoff&family=Orbitron&display=swap');
+
+/* CSS Variables */ 
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #28a745;
+    --teal: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3445;
+    --dark-gray: #343a40;
+    --secondary-gray: #6c757d;
+
+    --green: #27ae60;
+    --darkblue: #192a56;
+    --light-gray: #666;
+    --light: #fff;
+    --warning-dark: #FF8800;
+    --danger-dark: #CC0000;
+    --success-dark: #007E33;
+    --info-dark: #0099CC;
+    --logo-color: #007A4D;
+    --blue: #003875;
+    --dark: #000;
+    --shadow: rgba(0, 0, 0, 0.1) 0 4px 6px -1px, 
+    rgba(0, 0, 0, 0.6) 0 2px 4px -1px;
+    --size: 1rem;
+    --logo: #5941a9;
+    --shadow-1: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* ============= GLOBAL RESET ================== */
+* {
+    font-family: 'Poppins', sans-serif;
+    padding: 0; 
+    margin: 0;
+    box-sizing: border-box;
+  
+}
+
+html {
+    font-family: 'Poppins', sans-serif;
+    font-size: 10px;
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+section {
+    padding: 3.9rem 0;
+}
+
+img {
+    width: 100%;
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    font-size: 1.6rem;
+}
+
+.container {
+    width: 100%;
+    max-width: 122.5rem;
+    margin: 0 auto;
+    padding: 0 2.4rem;
+}
+
+/* Header */
+header {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,.5), transparent);
+}
+
+/* Navigation */
+.nav {
+    height: 7.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Logo */
+.logo {
+    color: #fff;
+    font-size: 2.9rem;
+    font-family: 'Herr Von Muellerhoff', cursive;
+    font-weight: 900;
+    letter-spacing: 2px;
+    margin-right: -2px;
+}
+
+/* Menu Toggole  */
+.menu-toggle {
+    color: #fff;
+    font-size: 2.2rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 2.5rem;
+    cursor: pointer;
+    z-index: 1500;
+}
+
+.fa-times {
+    display: none;
+}
+
+/* Nav List */
+.nav-list {
+    list-style: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 80%;
+    background-color: #2C497F;
+    height: 100vh;
+    padding: 4.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    z-index: 1250;
+    transform: translateX(-100%);
+    transition: transform .8s;
+  
+}
+
+nav::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(100, 196, 227, 0.19);
+    z-index: 1000;
+    opacity: 0;
+    transform: scale(0);
+    transition: opacity .5s;
+
+}
+
+.open .fa-times {
+    display: block;
+}
+
+.open .fa-bars {
+    display: none;
+}
+
+.open .nav-list {
+    transform: translateX(0);
+}
+
+.open .nav::before {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.nav-item {
+    border-bottom: 2px solid rgba(255, 255, 255, .3);
+}
+.nav-link {
+    display: block;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+    margin-right: -2px;
+    transition: color 1s;
+}
+
+.nav-link:hover {
+    color: #baf008e8;
+}
+
+.hero {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,.5), transparent);
+}
+
+.sub-headline {
+    font-size: 3rem;
+}
+
+.headline {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.3rem;
+    font-weight: 200;
+    text-transform: uppercase;
+}
+
+.separator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.line {
+    width: 100%;
+    max-width: 8.4rem;
+    height: .25rem;
+    background-color: #000;
+    position: relative;
+}
+
+.line-right::before,
+.line-left::before {
+    content: '';
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    border: .8rem solid transparent;
+  
+}
+
+.line-right::before {
+    border-right-color: #000;
+    right: 0;
+}
+
+.line-left::before {
+    border-left-color: #000;
+    left: 0;
+}
+
+.asterisk {
+    margin: 0 1.3rem;
+    font-size: 1.7rem;
+    color: #000;
+}
+
+.btn {
+    display: inline-block;
+    letter-spacing: 2px;
+    margin-right: -2px;
+    text-transform: uppercase;
+    border: 2px solid #000;
+    font-weight: 900;
+    padding: .5rem;
+}
+
+.cta-btn {
+    font-size: 1.3rem;
+    color: #000;
+    padding: .2rem 1.8rem;
+    margin-top: 1.1rem;
+    border-radius: .4rem;
+    transition: background-color .5s;
+}
+
+.cta-btn:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+
+h1 {
+    font-size: 1.4rem;
+}
+
+/* About Me */
+
+.about-content {
+    margin-bottom: 4px;
+    text-align: justify;
+}
+
+.global-headline {
+    text-align: center;
+}
+
+.global-headline .first-letter {
+    color: var(--success-dark)
+}
+
+
+.global-headline .asterisk {
+    color: var(--darkblue);
+
+}
+.global-headline .fa-gear {
+    font-size: 30px;
+}
+
+.fa-cogs {
+    font-size: 30px;
+}
+.global-headline h1 {
+    font-size: 2rem;
+}
+
+.headline-dark {
+    color: var(--dark);
+    letter-spacing: .7rem;
+    margin-right: -.7rem;
+}
+
+.about-info {
+    text-align: center;
+}
+
+/* .my-story-description {
+    margin-bottom: 1rem;
+} */
+
+.my-story-description p {
+    margin-bottom: 1rem;
+}
+
+.body-btn {
+    font-size: 1.4rem;
+    color: var(--secondary-color);
+    border: none;
+    transition: color .5s;
+    position: relative;
+}
+
+.body-btn::before {
+    content: '';
+    position: absolute;
+    background-color: #003875;
+    height: 3px;
+    left: 0;
+    width: 100%;
+    bottom: -1px;
+}
+
+.body-btn:hover,
+.body-btn:focus {
+    color: #003875;
+}
+
+.body-btn:hover::before,
+.body-btn:hover::before
+{
+    background-color: var(--secondary-color);
+}
+/*End About Me */
