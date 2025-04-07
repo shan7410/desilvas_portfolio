@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Cabin|Calligraffitti|Fjalla+One|Inconsolata|Indie+Flower|Lato|Libre+Franklin|Noto+Sans+JP|Noto+Serif|Open+Sans|Open+Sans+Condensed:300|Oswald|Poppins|Roboto|Titillium+Web|Ubuntu+Condensed|Ubuntu+Mono|Yanone+Kaffeesatz&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Tint&display=swap');
 
 /* CSS Variables */ 
 :root {
@@ -137,6 +138,29 @@ img {
 
 .showcase h1 {
     text-transform: none;
+}
+
+.showcase .myname {
+    background-color: #fff;
+    text-align: center;
+    border-radius: 90%;
+    box-shadow: 5px 5px 5px rgb(0 0 0 / 70%);
+    font-family: "Bungee Tint", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.2rem;
+    padding: 4px;
+
+}
+
+
+.showcase .title {
+    background-color: #004b00;
+    color: #ffff;
+    box-shadow: 5px 5px 5px rgb(0 0 0 / 70%);
+    font-size: 1rem;
+    text-transform: capitalize;
+    font-family: 'Poppins', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .showcase h2 {
@@ -390,11 +414,15 @@ footer > h2 {
     transition: .3s;
 }
 
-.box .place, .email, .phone {
+.box .place, .email, .phone, .web {
     padding: 10px 0px;
     color: #fff;
 }
 
+.box a {
+    color: #fff;
+    text-transform: none;
+}
 
 .center span {
     color: #fff;
@@ -429,7 +457,7 @@ footer > h2 {
 @media only screen and (max-width: 768px) {
       /* ----- Showcase ------  */
     .showcase {
-        background-color: #004346; /* Warm Black */
+        background-color: #030808; /* Warm Black */
         height: auto;
         color: #fff;
         position: relative;
@@ -447,6 +475,14 @@ footer > h2 {
 
     .showcase .lead {
         text-align: justify;
+    }
+
+    .showcase .title {
+        background-color: #454545;
+        color: #ffff;
+        font-size: 1rem;
+        text-transform: capitalize;
+        font-family: 'Poppins', Tahoma, Geneva, Verdana, sans-serif;
     }
 
     .grid, 
