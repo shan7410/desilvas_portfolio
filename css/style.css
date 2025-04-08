@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Cabin|Calligraffitti|Fjalla+One|Inconsolata|Indie+Flower|Lato|Libre+Franklin|Noto+Sans+JP|Noto+Serif|Open+Sans|Open+Sans+Condensed:300|Oswald|Poppins|Roboto|Titillium+Web|Ubuntu+Condensed|Ubuntu+Mono|Yanone+Kaffeesatz&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Tint&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nabla&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Tint&family=Gugi&display=swap');
+
 
 /* CSS Variables */ 
 :root {
@@ -93,18 +96,22 @@ img {
 
 /* ======== START NAVBAR STYLE ======= */
 .navbar {
-    background-color: #192a56;
+    background-color: #535456;
     /* background-image: linear-gradient(to bottom, #192a56, transparent); */
     color: #fff;
     height: 70px;
 }
 
+
+
 .logo {
-    font-family: 'Titillium', sans-serif;
-    font-size: 1.4rem;
+    font-family: "gugi";
+    font-size: 1.6rem;
     text-transform: uppercase;
     letter-spacing: 2px;
 }
+
+
 
 .navbar ul {
     display: flex;
@@ -116,6 +123,7 @@ img {
     margin: 0 5px;
     font-size: 1rem;
     text-transform: uppercase;
+    text-decoration: none;
 }
 
 .navbar a:hover {
@@ -237,7 +245,32 @@ img {
 .skills .cards h3 {
     text-align: center;
     text-transform: uppercase;
+    background-color: #007A4D;
+    color: #ffff;
+    box-shadow: 5px 5px 5px rgb(0 0 0 / 70%);
+    font-size: 1rem;
+    text-transform: capitalize;
+    font-family: 'Poppins', Tahoma, Geneva, Verdana, sans-serif;
 
+}
+
+.jumbotron h5 {
+    font-family: 'Poppins', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #525752;
+    color: #ffff;
+    box-shadow: 5px 5px 5px rgb(0 0 0 / 70%);
+    font-size: 1rem;
+    text-transform: capitalize;
+    font-family: 'Poppins', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 5px;
+
+}
+
+.skills .cards .lead {
+    text-align: justify;
+    text-transform: initial;
 }
 
 .cards {
@@ -475,6 +508,7 @@ footer > h2 {
 
     .showcase .lead {
         text-align: justify;
+        text-transform: initial;
     }
 
     .showcase .title {
